@@ -12,7 +12,7 @@ public class Random2 {
     }
 
     public int[] losuj() {
-        int[] list = new int[1000];
+        int[] list = new int[1000];// jak zmieniać wielkość tablicy ?
         int sum = 0;
         for (int i = 0; sum < limit; i++) {
             list[i] = (int) (Math.random() * (max - min + 1) + min);
@@ -23,7 +23,10 @@ public class Random2 {
     }
 
     public void showList (){
-        System.out.println(list);
+        for (int i = 0; i < list.length; i++) {
+            System.out.println(list[i]);
+        }
+
     }
 
     public static void main(String[] args) {
