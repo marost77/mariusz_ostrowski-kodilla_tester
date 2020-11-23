@@ -2,15 +2,16 @@ public class Book {
     private String author;
     private String title;
 
-    public static Book of(String author, String title){
+    public static String of(String author, String title){
+        String book = (author +" "+ title);
 
-
-        return new Book();
+        return book;
 
     }
 
     public static void main(String[] args) {
-        Book book = Book.of("Isaac Asimov", "The Galaxy");
+        String someBook = Book.of("Isaac Asimov", "The Galaxy");
+        System.out.println(someBook);
 
     }
 
