@@ -11,6 +11,6 @@ public class Calculator {
     }
 
     public int squared(int a) {
-        return a^2;
+        return a*a;
     }
 }
