@@ -1,7 +1,14 @@
 package com.kodilla.collections.interfaces.homework;
 
 public class Ferrari implements Car{
-    int speed;
+    int speed = 0;
+    int accelerate;
+    int brake;
+
+    public Ferrari(int accelerate, int brake) {
+        this.accelerate = accelerate;
+        this.brake = brake;
+    }
 
     @Override
     public int getSpeed() {
@@ -9,10 +16,10 @@ public class Ferrari implements Car{
     }
 
     @Override
-    public void increaseSpeed() {speed = speed + 10;    }
+    public void increaseSpeed() {speed = speed + accelerate;    }
 
     @Override
     public void decreaseSpeed() {
-        speed = speed - 8;
+        speed = speed - brake;
     }
 }
