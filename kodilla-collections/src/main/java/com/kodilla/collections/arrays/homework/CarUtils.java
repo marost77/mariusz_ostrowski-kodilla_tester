@@ -8,8 +8,7 @@ import com.kodilla.collections.interfaces.homework.Toyota;
 public class CarUtils {
 
     public static void describeCar(Car car){
-        System.out.println("^^^^^^^^^^^^^^^^^^");
-        System.out.println(getCarName(car));
+        System.out.println("()"+getCarName(car)+"()");
     }
 
     private static String getCarName (Car car){
