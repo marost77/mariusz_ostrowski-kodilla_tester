@@ -10,7 +10,6 @@ public class CarUtils {
     public static void describeCar(Car car){
         System.out.println("^^^^^^^^^^^^^^^^^^");
         System.out.println(getCarName(car));
-
     }
 
     private static String getCarName (Car car){
@@ -23,4 +22,5 @@ public class CarUtils {
         else
             return "Unknown car name";
     }
+
 }

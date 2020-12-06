@@ -2,7 +2,7 @@ package com.kodilla.collections.interfaces.homework;
 
 public class Toyota implements Car{
 
-    int speed = 0;
+    int speed;
     int accelerate;
     int brake;
 
