@@ -21,8 +21,6 @@ class CarConfigTestSuite {
         Assertions.assertTrue(possibleCars.contains(car.getCarType()));
     }
 
-    @Test
-    public void shoulg
 
 
 

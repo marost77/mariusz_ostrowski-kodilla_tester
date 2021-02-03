@@ -18,12 +18,10 @@ class ClockTestSuite {
 
         LocalTime expectedTime = LocalTime.now();
         LocalTime test1Time = clock1.showTime();
-        LocalTime test2Time = clock1.showTime();
-        LocalTime test3Time = clock1.showTime();
+
 
         Assertions.assertNotEquals(expectedTime,test1Time);
-        Assertions.assertNotEquals(expectedTime, test2Time);
-        Assertions.assertNotEquals(expectedTime, test3Time);
+
     }
 
 }
