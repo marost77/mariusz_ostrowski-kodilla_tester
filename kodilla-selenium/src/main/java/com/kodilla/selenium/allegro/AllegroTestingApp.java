@@ -17,6 +17,7 @@ public class AllegroTestingApp {
 
         //WebElement inputField = driver.findElement(By.xpath("//html/body/div[3]/div[5]/header/div/div/div[1]/div/form/input"));
         WebElement inputField = driver.findElement(By.xpath("//input[@placeholder=\"czego szukasz?\"]"));
+
         inputField.sendKeys("Mavic mini");
         inputField.submit();
 
