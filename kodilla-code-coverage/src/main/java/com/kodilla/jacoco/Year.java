@@ -2,16 +2,16 @@ package com.kodilla.jacoco;
 
 public class Year {
 
-    int year;
+    int sampleYear;
 
     public Year(int year) {
-        this.year = year;
+        this.sampleYear = year;
     }
 
     public boolean isLeap() {
-        if (this.year % 4 == 0) {
-            if (this.year % 100 == 0) {
-                if (this.year % 400 == 0) {
+        if (this.sampleYear % 4 == 0) {
+            if (this.sampleYear % 100 == 0) {
+                if (this.sampleYear % 400 == 0) {
                     return true;
                 } else {
                     return false;
