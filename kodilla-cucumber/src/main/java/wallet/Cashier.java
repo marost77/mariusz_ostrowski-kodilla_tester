@@ -16,6 +16,10 @@ public class Cashier {
             cashSlot.dispense(0);
         }
         else
-        cashSlot.dispense(amount);
+            //wallet.debit(amount);
+            cashSlot.dispense(amount);
+
     }
+
+
 }

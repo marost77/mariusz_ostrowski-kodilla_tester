@@ -35,5 +35,11 @@ public class WalletSteps implements En {
             Assert.assertEquals(0, cashSlot.getContents());
         });
 
+        Then("the balance of my wallet should be $170", () -> {
+            // Write code here that turns the phrase above into concrete actions
+            throw new io.cucumber.java8.PendingException();
+        });
+
+
     }
 }
