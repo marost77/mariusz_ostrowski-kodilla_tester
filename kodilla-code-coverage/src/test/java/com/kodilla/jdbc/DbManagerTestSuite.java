@@ -83,7 +83,7 @@ public class DbManagerTestSuite {
         }
         rs.close();
         statement.close();
-        Assert.assertEquals(3, counter);
+        Assert.assertEquals(4, counter);
 
 
     }
