@@ -2,17 +2,30 @@ public class Book {
     private String author;
     private String title;
 
-    public static String of(String author, String title){
-        String book = (author +" "+ title);
+    public Book(String author, String title) {
+        this.author = author;
+        this.title = title;
+    }
+
+    public static Book of(String author, String title){
+        Book book = new Book(author, title);
 
         return book;
 
     }
 
-    public static void main(String[] args) {
-        String someBook = Book.of("Isaac Asimov", "The Galaxy");
-        System.out.println(someBook);
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author='" + author + '\'' +
+                ", title='" + title + '\'' +
+                '}';
     }
+
+    public static void main(String[] args) {
+        System.out.println(Book.of("Isaac Asimov", "The Galaxy"));
+    }
+
 
 }

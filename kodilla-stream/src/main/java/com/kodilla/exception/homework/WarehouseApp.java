@@ -1,7 +1,5 @@
 package com.kodilla.exception.homework;
 
-import com.kodilla.exception.AirportNotFoundException;
-
 public class WarehouseApp {
     public static void main(String[] args) {
         Warehouse warehouse = new Warehouse();
@@ -11,7 +9,7 @@ public class WarehouseApp {
         warehouse.addOrder("6/11");
         warehouse.addOrder("5/11");
 
-        String orderNoToCheck = "1/12";
+        String orderNoToCheck = "3/12";
 
         try {
             warehouse.getOrder(orderNoToCheck);
