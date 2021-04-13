@@ -1,7 +1,6 @@
 package com.kodilla.execution_model.homework;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Shop {
@@ -12,11 +11,21 @@ public class Shop {
         orderList.add(order);
     }
 
-    public void getOrdersByDate(Date from, Date until){
+    //public void getOrdersByDate(Date from, Date until){
+        //orderList.stream()
+             //   .map(order -> order.getOrderDate())
+            //    .forEach(date -> date);
+   // }
+
+    public void getOrderByValue(int minValue, int maxValue){
 
     }
 
-    public void getOrderByValue(int minValue, int maxValue){
+    public int ordersCount(){
+       return orderList.size();
+    }
+
+    public void ordersTotalValue(){
 
     }
 

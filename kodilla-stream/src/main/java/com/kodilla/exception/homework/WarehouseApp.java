@@ -1,7 +1,7 @@
 package com.kodilla.exception.homework;
 
 public class WarehouseApp {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         Warehouse warehouse = new Warehouse();
 
         warehouse.addOrder("1/12");
@@ -13,13 +13,10 @@ public class WarehouseApp {
 
         try {
             warehouse.getOrder(orderNoToCheck);
-            System.out.println("Order "+orderNoToCheck+" exists in warehouse");
         } catch (OrderDoesntExistException e) {
-            System.out.println("Wrong order number");
+            System.out.println("Sorry order: "+orderNoToCheck+" doesnt exist");;
         }
-        finally {
-            System.out.println("Good bye");
-        }
+        // warehouse.isOrderValid(orderNoToCheck);
 
 
     }

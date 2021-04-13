@@ -6,9 +6,9 @@ public class User {
         this.userName = userName;
         this.userAge = userAge;    }
 
-    public int getAge() {return userAge;} //  po co ten get ?
+    public int getAge() {return userAge;}
 
-    public String getName() {return userName;} //  po co ten get ?
+    public String getName() {return userName;}
 
 
 
@@ -28,15 +28,15 @@ public class User {
 
             double sum = 0;
             for (int i = 0; i < users.length; i++) {
-                sum = sum + users[i].userAge;
+                sum = sum + users[i].getAge();
             }
 
             double average = sum / users.length;
             System.out.println("Average age is: "+average);
 
         for (int i = 0; i < users.length; i++) {
-            if (users[i].userAge < average) {
-                System.out.println(users[i].userName);
+            if (users[i].getAge() < average) {
+                System.out.println(users[i].getName());
             }
 
         }

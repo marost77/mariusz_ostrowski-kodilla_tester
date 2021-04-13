@@ -9,5 +9,7 @@ public abstract class Job {
         this.responsibilities = responsibilities;
     }
 
-
+    public String getResponsibilities() {
+        return responsibilities;
+    }
 }

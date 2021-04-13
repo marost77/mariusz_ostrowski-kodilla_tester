@@ -1,16 +1,19 @@
 package com.kodilla.abstracts.homework;
 
-public class Person extends Job{
+public class Person {
     private String firstName;
+    private int age;
+    Job job;
 
-    public Person(double salary, String responsibilities, String firstName) {
-        super(salary, responsibilities);
-        this.firstName=firstName;
+
+    public Person(String firstName, int age, Job job) {
+        this.firstName = firstName;
+        this.age = age;
+        this.job = job;
     }
 
-
     public void showResponsibilities(){
-        System.out.println("Person "+firstName+" responsibilities are: "+responsibilities);
+        System.out.println("Person "+firstName+" responsibilities are: "+job.getResponsibilities());
     }
 
 

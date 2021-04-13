@@ -8,6 +8,8 @@ public class BankTestSuite {
     Bank bank = new Bank();
     CashMachine atm1 = new CashMachine();
     CashMachine atm2 = new CashMachine();
+    CashMachine[] atmList = {atm1, atm2};
+
 
     @Test
     public void calculateTotalBalance(){
@@ -19,7 +21,7 @@ public class BankTestSuite {
         atm2.transaction(-100);
         atm2.transaction(-200);
         atm2.transaction(100);
-        assertEquals(400,bank.totalBalance(atm1, atm2));
+        assertEquals(400,bank.totalBalance(atmList));
     }
     @Test
     public void countTotalIns(){
@@ -31,7 +33,7 @@ public class BankTestSuite {
         atm2.transaction(-100);
         atm2.transaction(-200);
         atm2.transaction(100);
-        assertEquals(4,bank.inTransactionsCount(atm1, atm2));
+        assertEquals(4,bank.inTransactionsCount(atmList));
     }
 
     @Test

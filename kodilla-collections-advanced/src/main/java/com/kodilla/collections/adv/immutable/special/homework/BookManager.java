@@ -5,17 +5,19 @@ import java.util.List;
 
 public class BookManager {
 
+    static List<Book> bookList = new ArrayList<>();
+
 
     public static Book createBook(String title, String author) {
 
-        List<Book> bookList = new ArrayList<>();
         Book bookEntry = new Book(title, author);
+        //return bookEntry;
 
         for (Book book : bookList) {
-            if (book.getAuthor() != bookEntry.getAuthor() & book.getTitle() != bookEntry.getTitle())
-                bookList.add(bookEntry);
-            return new Book(bookEntry.getTitle(), bookEntry.getAuthor());
+            if (book.getAuthor() == bookEntry.getTitle() & book.getTitle() == bookEntry.getTitle())
+                System.out.println("Book "+title+" "+author+" already exists");
         }
-        return null;
+        bookList.add(bookEntry);
+        return bookEntry;
     }
 }

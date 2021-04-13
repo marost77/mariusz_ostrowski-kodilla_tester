@@ -1,21 +1,23 @@
 package com.kodilla.bank.homework;
 
 public class Bank {
-    CashMachine atm1;
-    CashMachine atm2;
+    private CashMachine[] atmList;
 
-    public int totalBalance(CashMachine atm1, CashMachine atm2){
-
-            int totalBalance = atm1.balance()+atm2.balance();
-
-            return totalBalance;
+    public double totalBalance(CashMachine[] atmList){
+        double sum =0;
+        for (CashMachine atm :atmList) {
+            sum = sum + atm.balance();
+        }
+            return sum;
     }
 
 
-    public int inTransactionsCount(CashMachine atm1, CashMachine atm2){
-        int totalInTransactionsCount = atm1.inValuesCount()+atm2.inValuesCount();
-
-        return totalInTransactionsCount;
+    public double inTransactionsCount(CashMachine[] atmList){
+        double sum = 0;
+        for (CashMachine atm : atmList) {
+            sum = sum + atm.inValuesCount();
+        }
+        return sum;
     }
 
     public int outTransactionsCount(CashMachine atm1, CashMachine atm2){

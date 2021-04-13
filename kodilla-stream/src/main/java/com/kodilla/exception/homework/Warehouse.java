@@ -1,7 +1,5 @@
 package com.kodilla.exception.homework;
 
-import com.kodilla.exception.AirportNotFoundException;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -10,30 +8,30 @@ public class Warehouse {
 
     List<Order> orderList = new ArrayList<>();
 
-    public List<Order> addOrder(String orderNo){
+    public void addOrder(String orderNo){
             orderList.add(new Order(orderNo));
-    return orderList;
     }
 
-    public Order getOrder(String number) throws OrderDoesntExistException {
+    public List<Order> getOrder(String number)  throws OrderDoesntExistException{
 
-        Order existingOrder = orderList
+        List existingOrder = orderList
                 .stream()
                 .filter(order -> order.getNumber() == number)
-                .findAny()
-                .get();
-
-        if (orderList.contains(existingOrder)) return existingOrder;
-        throw new OrderDoesntExistException();
-
+                //.map(order -> order.getNumber())
+                .collect(Collectors.toList());
+        if (existingOrder.size()==0) {
+            throw new OrderDoesntExistException();
+        }
+        else
+        return existingOrder;
     }
 
    // public Boolean isOrderValid(String number) throws OrderDoesntExistException {
-    //    if (getOrder(number).getNumber()==number)
-    //       return true;
-        //orderList.contains(getOrder(number));
-     //  throw new OrderDoesntExistException();
-   // }
+     //   if (orderList.contains(number))
+    //        return true;
+     //   throw new OrderDoesntExistException();
+  //  }
+
 
 
 }
