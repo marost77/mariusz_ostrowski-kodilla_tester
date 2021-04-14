@@ -41,10 +41,6 @@ class GamblingMachineTestSuite {
         testNumbers.add(7);
         testNumbers.add(8);
 
-        //boolean result = gamblingMachine.howManyWins(testNumbers) <= 6;
-        //assertThrows(InvalidNumbersException.class () -> gamblingMachine.howManyWins(inputSet), "Wrong numbers provided");
-        //assertThrows(InvalidNumbersException.class, () -> gamblingMachine.validateNumbers(testNumbers), "Wrong numbers provided");
-        //assertThrows(InvalidNumbersException.class, () -> gamblingMachine.validateNumbers(testNumbers), "Wrong numbers");
         Assertions.assertThrows(InvalidNumbersException.class, ()->gamblingMachine.validateNumbers(testNumbers),"Wrong numbers provided");
     }
 
