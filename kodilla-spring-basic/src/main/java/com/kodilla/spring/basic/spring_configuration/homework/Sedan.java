@@ -1,13 +1,10 @@
 package com.kodilla.spring.basic.spring_configuration.homework;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class Sedan implements Car{
 
-
-    @Override
-    public Car newCar(String season, int rideHour) {
-        return null;
-    }
 
     @Override
     public boolean hasHeadlightsTurnedOn(int rideHour) {

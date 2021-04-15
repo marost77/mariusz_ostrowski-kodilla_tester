@@ -12,14 +12,30 @@ import java.util.List;
 @SpringBootTest
 class CarConfigTestSuite {
 
+    ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
+    Car car = (Car) context.getBean("createCar");
+
     @Test
-    public void shouldCreateCar() {
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Car car = (Car) context.getBean("createCar");
+    void shouldCreateCar() {
 
         List<String> possibleCars = Arrays.asList("SUV", "Cabrio", "Sedan");
         Assertions.assertTrue(possibleCars.contains(car.getCarType()));
     }
+
+    @Test
+    void shouldTurnOffLights(){
+
+        Boolean checker = car.hasHeadlightsTurnedOn(7);
+        Assertions.assertFalse(checker);
+    }
+
+    @Test
+    void shouldTurnOnLights(){
+
+        Boolean checker = car.hasHeadlightsTurnedOn(21);
+        Assertions.assertTrue(checker);
+    }
+
 
 
 
